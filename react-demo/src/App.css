@@ -1,0 +1,25 @@
+.app{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:24px;
+  background-color: #eff6ff;
+}
+.welcome-card{
+  width:100%;
+  max-width: 650px;
+  padding:32px;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(30,64,175,0.15);
+}
+h1{
+  margin-top: 8px;
+  color:#1e3a8a;
+}
+.day-label{
+  margin:0;
+  color:#2563eb;
+  font-weight:bold;
+}
