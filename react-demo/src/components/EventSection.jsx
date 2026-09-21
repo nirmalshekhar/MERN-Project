@@ -163,14 +163,14 @@
 // }
 // export default EventSection;
 import EventCard from "./EventCard";
-import {events} from "../data/events";
-function EventSection(){
+import {initialevents} from "../data/events";
+function EventSection({events}){
   return (
     <section id="events" 
     className="event-section">
       <div className="section-heading">
         <div>
-          <p classname="section-label">
+          <p className="section-label">
             Upcoming Activities
           </p>
           <h2>Explore campus Events</h2>
