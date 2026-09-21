@@ -124,42 +124,76 @@
 // }
 
 // export default EventSection;
-import EventCard from "./EventCard";
+// import EventCard from "./EventCard";
 
-function EventSection({ events }) {
+// function EventSection({ events }) {
+//   return (
+//     <section id="events" className="events-section">
+//       <div className="section-heading">
+//         <div>
+//           <p className="section-label">Upcoming Activities</p>
+
+//           <h2>Explore Campus Events</h2>
+//         </div>
+
+//         <p>{events.length} events available</p>
+//       </div>
+
+//       {events.length === 0 ? (
+//         <p>No events are available right now.</p>
+//       ) : (
+//         <div className="event-grid">
+//           {events.map(function (event) {
+//             return (
+//               <EventCard
+//                 key={event.id}
+//                 title={event.title}
+//                 category={event.category}
+//                 date={event.date}
+//                 time={event.time}
+//                 location={event.location}
+//                 description={event.description}
+//               />
+//             );
+//           })}
+//         </div>
+//       )}
+//     </section>
+//   );
+// }
+// export default EventSection;
+import EventCard from "./EventCard";
+import {events} from "../data/events";
+function EventSection(){
   return (
-    <section id="events" className="events-section">
+    <section id="events" 
+    className="event-section">
       <div className="section-heading">
         <div>
-          <p className="section-label">Upcoming Activities</p>
-
-          <h2>Explore Campus Events</h2>
+          <p classname="section-label">
+            Upcoming Activities
+          </p>
+          <h2>Explore campus Events</h2>
         </div>
-
         <p>{events.length} events available</p>
       </div>
-
-      {events.length === 0 ? (
-        <p>No events are available right now.</p>
-      ) : (
-        <div className="event-grid">
-          {events.map(function (event) {
-            return (
-              <EventCard
-                key={event.id}
-                title={event.title}
-                category={event.category}
-                date={event.date}
-                time={event.time}
-                location={event.location}
-                description={event.description}
-              />
-            );
-          })}
-        </div>
-      )}
+      <div className="event-grid">
+        {events.map(function(event){
+          return(
+            <EventCard
+            key={event.id}
+            id={event.id}
+            title={event.title}
+            category={event.category}
+            date={event.date}
+            time={event.time}
+            location={event.location}
+            description={event.description}
+            />
+          );
+        })}
+      </div>
     </section>
   );
 }
-
 export default EventSection;
