@@ -10,7 +10,8 @@ function EventsPage({events}){
             <h1>Events</h1>
             <p>Explore all workshops,clubs,sports, and cultural activities</p>
         </section>
-        <EventSection events={events}/>
+        <EventSection events={events}
+        onDeleteEvent={onDeleteEvent}/>
         </>
     );
 }

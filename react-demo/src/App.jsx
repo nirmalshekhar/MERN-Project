@@ -102,6 +102,15 @@ function App() {
     setEvents([...events, newEvent]);
   }
 
+  function handleDeleteEvent(eventId) {
+    const updatedEvents = 
+    events.filter(function (event) {
+      return event.id !== eventId;
+    });
+
+    setEvents(updatedEvents);
+  }
+
   return (
     <div>
       <Navbar />
@@ -113,6 +122,7 @@ function App() {
             <HomePage
               events={events}
               onAddEvent={handleAddEvent}
+              onDeleteEvent={handleDeleteEvent}
             />
           }
         />
@@ -120,14 +130,19 @@ function App() {
         <Route
           path="/events"
           element={
-            <EventsPage events={events} />
+            <EventsPage
+              events={events}
+              onDeleteEvent={handleDeleteEvent}
+            />
           }
         />
 
         <Route
           path="/events/:eventId"
           element={
-            <EventDetailsPage events={events} />
+            <EventDetailsPage
+              events={events}
+            />
           }
         />
 
