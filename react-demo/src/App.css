@@ -280,3 +280,62 @@ h1{
   color:white;
   text-decoration: none;
 }
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.card-actions .details-button,
+.card-actions .delete-button {
+  margin-top: 0;
+}
+
+.delete-button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #dc2626;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #b91c1c;
+}
+
+.search-filter-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.search-filter-bar input,
+.search-filter-bar select {
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.search-filter-bar input {
+  flex: 1;
+}
+
+.empty-message {
+  padding: 25px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+@media (max-width: 700px) {
+  .search-filter-bar {
+    flex-direction: column;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+}
