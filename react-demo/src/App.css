@@ -162,6 +162,7 @@ h1{
     gap: 16px;
   }
   .nav-links{
+    display:flex;
     flex-wrap:wrap;
     justify-content:center;
   }
@@ -255,4 +256,27 @@ h1{
   max-width: 700px;
   line-height: 1.7;
   color: #475569;
+}
+.event-details-page{
+  max-width:900px;
+  margin:auto;
+  padding:70px 8%;
+}
+.event-details-page h1{
+  color:#0f172a;
+}
+.details-box{
+  margin:25px 0;
+  padding: 20px;
+  border-radius:10px;
+  background-color: #eff6ff;
+}
+.details-button{
+  display:inline-block;
+  margin-top:16px;
+  padding:10px 14px;
+  border-radius:6px;
+  background-color: #2563eb;
+  color:white;
+  text-decoration: none;
 }

@@ -163,32 +163,34 @@
 // }
 // export default EventSection;
 import EventCard from "./EventCard";
-import {initialevents} from "../data/events";
-function EventSection({events}){
+
+function EventSection({ events }) {
   return (
-    <section id="events" 
-    className="event-section">
+    <section id="events" className="event-section">
       <div className="section-heading">
         <div>
           <p className="section-label">
             Upcoming Activities
           </p>
-          <h2>Explore campus Events</h2>
+
+          <h2>Explore Campus Events</h2>
         </div>
+
         <p>{events.length} events available</p>
       </div>
+
       <div className="event-grid">
-        {events.map(function(event){
-          return(
+        {events.map(function (event) {
+          return (
             <EventCard
-            key={event.id}
-            id={event.id}
-            title={event.title}
-            category={event.category}
-            date={event.date}
-            time={event.time}
-            location={event.location}
-            description={event.description}
+              key={event.id}
+              id={event.id}
+              title={event.title}
+              category={event.category}
+              date={event.date}
+              time={event.time}
+              location={event.location}
+              description={event.description}
             />
           );
         })}
@@ -196,4 +198,5 @@ function EventSection({events}){
     </section>
   );
 }
+
 export default EventSection;
